@@ -1,0 +1,1219 @@
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  html,
+  body {
+    font-size: 25px;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "services" "helper" "help" "foote";
+    grid-template-rows: 130px 950px 1fr 200px 950px 518px;
+    /*77px 637px 700px 605px 382px 828px 573px 573px 318px 1274px 701px 318px;*/
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    grid-area: head;
+    border-bottom: 1px solid black;
+    /* linear-gradient(to bottom, white,snow)  rgba(175, 230, 153, 0.1)*/
+    /*box-shadow: inset 0px -2px 7px black;*/
+  }
+  #Main #Menu #Logo {
+    height: 125px;
+    width: 150px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+  }
+  #Main #Menu nav {
+    position: absolute;
+    left: 15%;
+    height: 100%;
+    width: 85%;
+  }
+  #Main #Menu nav ul {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    margin: 0;
+  }
+  #Main #Menu nav ul #button {
+    padding: 0;
+  }
+  #Main #Menu nav ul #button form {
+    width: 140%;
+  }
+  #Main #Menu nav ul #button form input[type="button"] {
+    background: rgba(0, 0, 0, 0);
+    /*linear-gradient(to bottom, #00b800, #045d00)*/
+    box-shadow: 0 -4px #848484 inset, 0 0 5px rgba(0, 0, 0, 0.7);
+    /*нужна ли?*/
+    padding: 15px;
+    font-size: 100%;
+    color: #484848;
+    font-weight: bold;
+    border: 1px solid #747474;
+    border-radius: 15px 0 0 0;
+    width: 100%;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:hover {
+    background: #009c00;
+    color: #ffffff;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.7), 0 -5px #047200 inset;
+    /*text-shadow: 0 0 8px black;*/
+  }
+  #Main #Menu nav ul #button form input[type="button"]:active {
+    box-shadow: 0 3px 3px #045d00 inset, 0 0 5px rgba(0, 0, 0, 0.7), 0 -2px #045d00 inset;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    padding: 35px 40px 15px 40px;
+    font-size: 105%;
+    text-transform: uppercase;
+    /*-webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;*/
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: visible;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main .slider article {
+    position: absolute;
+    font-family: Comic-Relief, sans-serif;
+    width: 40%;
+    top: 100%;
+    left: 5%;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article h1 {
+    color: white;
+    font-size: 216%;
+    margin: 0;
+    text-shadow: 0 0 10px black;
+  }
+  #Main .slider article hr {
+    width: 100%;
+  }
+  #Main .slider article p {
+    font-size: 130%;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+  #Main #services {
+    grid-area: services;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #services h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 216%;
+  }
+  #Main #services hr {
+    width: 70%;
+  }
+  #Main #services #container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 94%;
+    margin: 30% 5% 0 3%;
+    transition: margin 1s ease-out;
+  }
+  #Main #services #container article {
+    position: relative;
+    width: 560px;
+    height: 700px;
+    background: rgba(63, 255, 0, 0.07);
+    border: 2px solid green;
+    transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  #Main #services #container article div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    filter: grayscale(20%);
+  }
+  #Main #services #container article div p {
+    width: 80%;
+    font-size: 130%;
+    text-align: center;
+    margin: 30% 10% 0 10%;
+    color: #ffffff;
+    text-shadow: 0 0 7px black;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article #first {
+    background: url("../files/Baidarka1.jpg");
+    background-size: 250%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #second {
+    background: url("../files/Baidarka3.jpg");
+    background-size: 250%;
+    background-position-x: 20%;
+  }
+  #Main #services #container article #third {
+    background: url("../files/splav2.jpg");
+    background-size: 200%;
+    background-position-x: 25%;
+  }
+  #Main #services #container article #fourth {
+    background: url("../files/nadyv1.jpg");
+    background-size: 200%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #five {
+    background: url("../files/katamaran2.jpg");
+    background-size: 230%;
+    background-position-x: 95%;
+  }
+  #Main #services #container article #six {
+    background: url("../files/extrim.jpg");
+    background-size: 200%;
+    background-position-x: 30%;
+  }
+  #Main #services #container article h1 {
+    position: relative;
+    color: white;
+    text-shadow: -1px 0 5px black;
+    transition: text-shadow 0.3s ease-out;
+    margin-top: 40px;
+  }
+  #Main #services #container article form {
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+  }
+  #Main #services #container article form input[type="submit"] {
+    transform: scale(0);
+    color: #fff;
+    background: #008b00;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+    text-shadow: 0 0 5px black;
+    border: 1px solid black;
+    font-size: 80%;
+    font-weight: bold;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article:hover input[type="submit"] {
+    transform: scale(1);
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:active input[type="submit"] {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:hover h1 {
+    text-shadow: -2px 0 7px black;
+  }
+  #Main #services #container article:hover p {
+    transform: scale(1);
+  }
+  #Main #helper {
+    grid-area: helper;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.77), black);
+  }
+  #Main #helper div {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-image: url("../files/question.png");
+    background-size: cover;
+    left: 10%;
+    top: 40%;
+    filter: drop-shadow(1px 3px 1px black);
+  }
+  #Main #helper h1 {
+    color: white;
+    text-align: center;
+    font-size: 180%;
+    margin: 50px;
+  }
+  #Main #help {
+    grid-area: help;
+    background-color: grey;
+  }
+  #Main #help form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 750px;
+    height: 70%;
+    margin: 80px auto 20px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #help form input {
+    border: none;
+    font-size: 100%;
+    height: 15%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #help form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #help form input:nth-of-type(5n) {
+    height: 30%;
+  }
+  #Main #help form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    /*display:inline-block*/
+    width: 25%;
+    height: 70%;
+    padding: 20px 20px 0 60px;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    /*при уменьшении перескакивают, пошамань с шириной их контейнера(была 15%)*/
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 17px;
+  }
+  #helper {
+    grid-area: helper;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.77), black);
+  }
+  #helper div {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-image: url("../files/question.png");
+    background-size: cover;
+    left: 10%;
+    top: 40%;
+    filter: drop-shadow(1px 3px 1px black);
+  }
+  #helper h1 {
+    color: white;
+    text-align: center;
+    font-size: 180%;
+    margin: 50px 0 0 110px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "services" "helper" "help" "foote";
+    grid-template-rows: 77px 637px 1fr 150px 637px 318px;
+    /*77px 637px 700px 605px 382px 828px 573px 573px 318px 1274px 701px 318px;*/
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+    /* linear-gradient(to bottom, white,snow)  rgba(175, 230, 153, 0.1)*/
+    /*box-shadow: inset 0px -2px 7px black;*/
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+    /*background:url("../files/sayt2.png") no-repeat 30px -11px;*/
+    /*sprites set height and width and then background-image*/
+  }
+  #Main #Menu nav {
+    height: 100%;
+    width: 85%;
+  }
+  #Main #Menu nav ul {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  #Main #Menu nav ul #button {
+    padding: 0;
+  }
+  #Main #Menu nav ul #button form {
+    width: 140%;
+  }
+  #Main #Menu nav ul #button form input[type="button"] {
+    background: rgba(0, 0, 0, 0);
+    /*linear-gradient(to bottom, #00b800, #045d00)*/
+    box-shadow: 0 -2px #848484 inset, 0 0 3px rgba(0, 0, 0, 0.7);
+    /*нужна ли?*/
+    padding: 10px;
+    font-size: 100%;
+    color: #484848;
+    font-weight: bold;
+    border: 1px solid #747474;
+    border-radius: 10px 0 0 0;
+    width: 100%;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:hover {
+    background: #009c00;
+    color: #ffffff;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 -3px #047200 inset;
+    /*text-shadow: 0 0 8px black;*/
+  }
+  #Main #Menu nav ul #button form input[type="button"]:active {
+    box-shadow: 0 1px 1px #045d00 inset, 0 0 3px rgba(0, 0, 0, 0.7), 0 -1px #045d00 inset;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    padding: 35px 20px 15px 20px;
+    font-size: 105%;
+    text-transform: uppercase;
+    /*-webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;*/
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: visible;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 100%;
+    left: -18%;
+    padding: 0 5% 1% 5%;
+    width: 108%;
+    height: 125%;
+    background-color: rgba(59, 193, 145, 0.5);
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: 24% 0;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #Menu nav ul li:first-child > ul a {
+    text-decoration: none;
+    font-size: 110%;
+    color: white;
+    text-shadow: 0 0 7px black;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul a:hover {
+    color: #00c112;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    transform: scale(1);
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main .slider article {
+    position: absolute;
+    font-family: Comic-Relief, sans-serif;
+    width: 40%;
+    top: 100%;
+    left: 5%;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article h1 {
+    color: white;
+    font-size: 216%;
+    margin: 0;
+    text-shadow: 0 0 10px black;
+  }
+  #Main .slider article hr {
+    width: 100%;
+  }
+  #Main .slider article p {
+    font-size: 130%;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+  #Main #services {
+    grid-area: services;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #services h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 216%;
+  }
+  #Main #services hr {
+    width: 70%;
+  }
+  #Main #services #container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 94%;
+    margin: 30% 5% 0 3%;
+    transition: margin 1s ease-out;
+  }
+  #Main #services #container article {
+    position: relative;
+    width: 360px;
+    height: 422px;
+    background: rgba(63, 255, 0, 0.07);
+    border: 2px solid green;
+    margin: 10px 10px 30px 10px;
+    transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  #Main #services #container article div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    filter: grayscale(20%);
+  }
+  #Main #services #container article div p {
+    width: 80%;
+    font-size: 130%;
+    text-align: center;
+    margin: 30% 10% 0 10%;
+    color: #ffffff;
+    text-shadow: 0 0 7px black;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article #first {
+    background: url("../files/Baidarka1.jpg");
+    background-size: 250%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #second {
+    background: url("../files/Baidarka3.jpg");
+    background-size: 250%;
+    background-position-x: 20%;
+  }
+  #Main #services #container article #third {
+    background: url("../files/splav2.jpg");
+    background-size: 200%;
+    background-position-x: 25%;
+  }
+  #Main #services #container article #fourth {
+    background: url("../files/nadyv1.jpg");
+    background-size: 200%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #five {
+    background: url("../files/katamaran2.jpg");
+    background-size: 230%;
+    background-position-x: 95%;
+  }
+  #Main #services #container article #six {
+    background: url("../files/extrim.jpg");
+    background-size: 200%;
+    background-position-x: 30%;
+  }
+  #Main #services #container article h1 {
+    position: relative;
+    color: white;
+    text-shadow: -1px 0 5px black;
+    transition: text-shadow 0.3s ease-out;
+    margin-top: 40px;
+  }
+  #Main #services #container article form {
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+  }
+  #Main #services #container article form input[type="submit"] {
+    transform: scale(0);
+    color: #fff;
+    background: #008b00;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+    text-shadow: 0 0 5px black;
+    border: 1px solid black;
+    font-size: 80%;
+    font-weight: bold;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article:hover input[type="submit"] {
+    transform: scale(1);
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:active input[type="submit"] {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:hover h1 {
+    text-shadow: -2px 0 7px black;
+  }
+  #Main #services #container article:hover p {
+    transform: scale(1);
+  }
+  #Main #helper {
+    grid-area: helper;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.77), black);
+  }
+  #Main #helper div {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-image: url("../files/question.png");
+    background-size: cover;
+    left: 1%;
+    top: 30%;
+    filter: drop-shadow(1px 3px 1px black);
+  }
+  #Main #helper h1 {
+    color: white;
+    text-align: center;
+    font-size: 180%;
+    margin: 50px 0 0 150px;
+  }
+  #Main #help {
+    grid-area: help;
+    background-color: grey;
+  }
+  #Main #help form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 70%;
+    margin: 80px auto 20px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #help form input {
+    border: none;
+    font-size: 100%;
+    height: 15%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #help form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #help form input:nth-of-type(5n) {
+    height: 30%;
+  }
+  #Main #help form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    /*display:inline-block*/
+    width: 25%;
+    height: 70%;
+    padding: 20px 20px 0 60px;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    /*при уменьшении перескакивают, пошамань с шириной их контейнера(была 15%)*/
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+  #hamburger {
+    background: url("../files/hamburger.png") no-repeat 100px;
+    background-size: contain;
+    height: 100%;
+    width: 200px;
+  }
+  #Main #Menu .visible {
+    display: flex;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "services" "helper" "help" "foote";
+    grid-template-rows: 77px 300px 1fr 100px 637px 1018px;
+    /*77px 637px 700px 605px 382px 828px 573px 573px 318px 1274px 701px 318px;*/
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+    /* linear-gradient(to bottom, white,snow)  rgba(175, 230, 153, 0.1)*/
+    /*box-shadow: inset 0px -2px 7px black;*/
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+    /*background:url("../files/sayt2.png") no-repeat 30px -11px;*/
+    /*sprites set height and width and then background-image*/
+  }
+  #Main #Menu nav {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    height: 300px;
+    width: 100px;
+    z-index: 10;
+    background-color: #fff;
+  }
+  #Main #Menu nav ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  #Main #Menu nav ul #button {
+    display: none;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    width: 100px;
+    height: 101px;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+    padding: 38px 5px 0 17px;
+    font-size: 105%;
+    text-transform: uppercase;
+    border: 1px solid black;
+    /*-webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;*/
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 110%;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(even) {
+    display: none;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 299px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li:first-child > ul li {
+    display: block;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 110%;
+    color: black;
+    text-shadow: none;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a:hover {
+    color: black;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    display: none;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main .slider article {
+    position: absolute;
+    font-family: Comic-Relief, sans-serif;
+    width: 40%;
+    top: 100%;
+    left: 5%;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article h1 {
+    color: white;
+    font-size: 216%;
+    margin: 0;
+    text-shadow: 0 0 10px black;
+  }
+  #Main .slider article hr {
+    width: 100%;
+  }
+  #Main .slider article p {
+    font-size: 130%;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+  #Main #services {
+    grid-area: services;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #services h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 216%;
+  }
+  #Main #services hr {
+    width: 70%;
+  }
+  #Main #services #container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 94%;
+    margin: 30% 5% 0 3%;
+    transition: margin 1s ease-out;
+  }
+  #Main #services #container article {
+    position: relative;
+    width: 360px;
+    height: 422px;
+    background: rgba(63, 255, 0, 0.07);
+    border: 2px solid green;
+    margin: 10px 10px 30px 10px;
+    transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  #Main #services #container article div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    filter: grayscale(20%);
+  }
+  #Main #services #container article div p {
+    width: 80%;
+    font-size: 150%;
+    text-align: center;
+    margin: 30% 10% 0 10%;
+    color: #ffffff;
+    text-shadow: 0 0 7px black;
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article #first {
+    background: url("../files/Baidarka1.jpg");
+    background-size: 270%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #second {
+    background: url("../files/Baidarka3.jpg");
+    background-size: 270%;
+    background-position-x: 20%;
+  }
+  #Main #services #container article #third {
+    background: url("../files/splav2.jpg");
+    background-size: 220%;
+    background-position-x: 25%;
+  }
+  #Main #services #container article #fourth {
+    background: url("../files/nadyv1.jpg");
+    background-size: 225%;
+    background-position-x: 50%;
+  }
+  #Main #services #container article #five {
+    background: url("../files/katamaran2.jpg");
+    background-size: 250%;
+    background-position-x: 95%;
+  }
+  #Main #services #container article #six {
+    background: url("../files/extrim.jpg");
+    background-size: 220%;
+    background-position-x: 30%;
+  }
+  #Main #services #container article h1 {
+    position: relative;
+    color: white;
+    text-shadow: -1px 0 5px black;
+    transition: text-shadow 0.3s ease-out;
+    margin-top: 40px;
+  }
+  #Main #services #container article form {
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+  }
+  #Main #services #container article form input[type="submit"] {
+    transform: scale(1);
+    color: #fff;
+    background: #008b00;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+    text-shadow: 0 0 5px black;
+    border: 1px solid black;
+    font-size: 130%;
+    font-weight: bold;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #services #container article:hover input[type="submit"] {
+    transform: scale(1);
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:active input[type="submit"] {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #services #container article:hover h1 {
+    text-shadow: -2px 0 7px black;
+  }
+  #Main #services #container article:hover p {
+    transform: scale(1);
+  }
+  #Main #helper {
+    grid-area: helper;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.77), black);
+  }
+  #Main #helper div {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-image: url("../files/question.png");
+    background-size: cover;
+    left: 4%;
+    top: 60%;
+    filter: drop-shadow(1px 3px 1px black);
+  }
+  #Main #helper h1 {
+    color: white;
+    text-align: center;
+    font-size: 180%;
+    margin: 20px 0 0 50px;
+  }
+  #Main #help {
+    grid-area: help;
+    background-color: grey;
+  }
+  #Main #help form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 70%;
+    margin: 80px auto 20px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #help form input {
+    border: none;
+    font-size: 100%;
+    height: 15%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #help form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #help form input:nth-of-type(5n) {
+    height: 30%;
+  }
+  #Main #help form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    /*display:inline-block*/
+    width: 55%;
+    height: 70%;
+    font-size: 120%;
+    padding: 20px 0 0 0;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+    width: 250px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    /*при уменьшении перескакивают, пошамань с шириной их контейнера(была 15%)*/
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    transform: scale(0.8);
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    transform: scale(0.8);
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    transform: scale(0.8);
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    transform: scale(0.8);
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    transform: scale(0.8);
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    transform: scale(0.8);
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 40%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 200%;
+    padding: 10px;
+  }
+}

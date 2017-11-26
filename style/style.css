@@ -1,0 +1,4736 @@
+@keyframes zoom-1 {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  95% {
+    transform: scale(1);
+  }
+}
+@keyframes zoom-2 {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoom-3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoom-4 {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes slide-1 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-3 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-4 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@font-face {
+  font-family: Comic-Relief;
+  src: url(../fonts/ComicRelief.ttf);
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+hr {
+  border: 1px solid green;
+  margin-top: 4px;
+}
+.icon {
+  display: inline-block;
+  background: url("../files/icons.png") no-repeat;
+}
+button,
+input {
+  outline: none;
+}
+.connect.visible {
+  display: block;
+  z-index: 10;
+}
+.connect {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(7, 7, 7, 0.82);
+}
+.connect div {
+  font-size: 180%;
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+}
+.connect form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+  height: 55%;
+  margin: 60px auto 40px auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: white;
+}
+.connect form input {
+  border: none;
+  font-size: 100%;
+  height: 16%;
+  padding-left: 20px;
+  font-style: italic;
+  color: grey;
+}
+.connect form input:first-of-type {
+  margin-top: 5px;
+}
+.connect form input[type="button"] {
+  color: #fff;
+  font-weight: bold;
+  font-size: 120%;
+  font-style: normal;
+  width: 100%;
+  height: 20%;
+  background: #008b00;
+  border: 1px solid #008b00;
+  border-radius: 0 0 5px 5px;
+  text-shadow: 0 0 5px black;
+  margin: 0;
+}
+#Main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+  grid-template-rows: 77px 637px 764px 605px 382px 1fr 573px 640px 318px 1600px 701px 318px;
+  grid-template-columns: 100%;
+}
+#Main #Menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  grid-area: head;
+  background: white;
+  border-bottom: 1px solid black;
+}
+#Main #Menu #Logo {
+  height: 75px;
+  width: 80px;
+  background: url("../files/sayt1.png");
+  background-size: cover;
+  margin-left: 30px;
+}
+#Main #Menu nav {
+  height: 100%;
+  width: 85%;
+}
+#Main #Menu nav ul {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+#Main #Menu nav ul #button {
+  padding: 0;
+}
+#Main #Menu nav ul #button form {
+  width: 140%;
+}
+#Main #Menu nav ul #button form input[type="button"] {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 -2px #848484 inset, 0 0 3px rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 100%;
+  color: #484848;
+  font-weight: bold;
+  border: 1px solid #747474;
+  border-radius: 10px 0 0 0;
+  width: 100%;
+}
+#Main #Menu nav ul #button form input[type="button"]:hover {
+  background: #009c00;
+  color: #ffffff;
+  text-shadow: 0 0 3px black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 -3px #047200 inset;
+}
+#Main #Menu nav ul #button form input[type="button"]:active {
+  box-shadow: 0 1px 1px #045d00 inset, 0 0 3px rgba(0, 0, 0, 0.7), 0 -1px #045d00 inset;
+}
+#Main #Menu nav ul li {
+  list-style-type: none;
+  padding: 35px 40px 15px 40px;
+  font-size: 105%;
+  text-transform: uppercase;
+}
+#Main #Menu nav ul li a {
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+#Main #Menu nav ul li a:hover {
+  color: #00b737;
+}
+#Main #Menu nav ul li hr {
+  visibility: hidden;
+}
+#Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+  visibility: visible;
+}
+#Main #Menu nav ul li:first-child > ul {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 77px;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 125%;
+  background-color: rgba(59, 193, 145, 0.5);
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: 24% 0;
+  transition: transform 0.3s ease-out;
+}
+#Main #Menu nav ul li:first-child > ul li {
+  padding: 0;
+}
+#Main #Menu nav ul li:first-child > ul li a {
+  text-decoration: none;
+  font-size: 110%;
+  color: white;
+  text-shadow: 0 0 7px black;
+  text-transform: none;
+}
+#Main #Menu nav ul li:first-child > ul li a:hover {
+  color: #cfcad0;
+}
+#Main #Menu nav ul li:first-child:hover > ul {
+  transform: scale(1);
+}
+#Main #Menu nav ul li hr {
+  visibility: hidden;
+}
+#Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+  visibility: visible;
+}
+#Main .slider {
+  grid-area: slider;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: #3bc191;
+}
+#Main .slider #first {
+  height: 637px;
+  width: 100%;
+  background-size: cover;
+  background-image: url(../files/1920x1080/1.jpg);
+  animation: slide-1 40s infinite linear, zoom-1 40s infinite linear;
+}
+#Main .slider #second {
+  height: 637px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../files/1920x1080/2.jpg");
+  animation: slide-2 40s infinite, zoom-2 40s infinite linear;
+}
+#Main .slider #third {
+  height: 637px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../files/1920x1080/3.jpg");
+  animation: slide-3 40s infinite, zoom-3 40s infinite linear;
+}
+#Main .slider #fourth {
+  height: 637px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../files/1920x1080/4.jpg");
+  animation: slide-4 40s infinite, zoom-4 40s infinite linear;
+}
+#Main .slider article {
+  position: absolute;
+  top: 100%;
+  left: 4%;
+  height: 60%;
+  width: 40%;
+  text-shadow: 0 0 10px black;
+  z-index: 2;
+  font-family: Comic-Relief, sans-serif;
+  transition: top 1.4s ease-out;
+}
+#Main .slider article p {
+  font-size: 160%;
+  color: #fff;
+  text-align: left;
+  margin-top: 0;
+}
+#Main .slider article h1 {
+  font-size: 250%;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+}
+#Main .slider article form {
+  width: 200px;
+  height: 80px;
+}
+#Main .slider article form input[type="submit"] {
+  color: #fff;
+  font-weight: bold;
+  font-size: 130%;
+  width: 100%;
+  height: 100%;
+  background: #008b00;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  text-shadow: 0 0 5px black;
+  box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+}
+#Main .slider article form input[type="submit"]:hover {
+  background: #009400;
+  box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+}
+#Main .slider article form input[type="submit"]:active {
+  box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+}
+#Main .slider div {
+  position: absolute;
+  left: 0;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+#Main #best {
+  grid-area: main1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  overflow: hidden;
+  line-height: 1.5;
+  background-color: rgba(63, 255, 0, 0.07);
+}
+#Main #best article {
+  font-size: 120%;
+  height: 100%;
+  margin-top: 50%;
+  transition: margin-top 1s ease-out;
+}
+#Main #best article h1 {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 180%;
+}
+#Main #best article hr {
+  width: 50%;
+}
+#Main #best article p {
+  margin: 4% 10% 4% 10%;
+}
+#Main #best article p::before {
+  content: "\002B";
+  color: green;
+  font-size: 250%;
+  float: left;
+  margin: 0 3% 6% 0;
+}
+#Main #best article p:hover::before {
+  filter: hue-rotate(90deg);
+}
+#Main #exhibit {
+  grid-area: exhibit;
+  background-color: #000000;
+  color: white;
+}
+#Main #exhibit h1 {
+  text-align: center;
+  font-size: 216%;
+  margin: 70px 0 20px 0;
+}
+#Main #exhibit #containerExhibit {
+  display: flex;
+  justify-content: space-around;
+  height: 70%;
+}
+#Main #exhibit #containerExhibit figure {
+  width: 301px;
+  margin: 0;
+}
+#Main #exhibit #containerExhibit figure #boat {
+  height: 299px;
+  background: url("../files/boat.png");
+  background-size: cover;
+}
+#Main #exhibit #containerExhibit figure #oar {
+  height: 299px;
+  background: url("../files/oar.png");
+  background-size: cover;
+}
+#Main #exhibit #containerExhibit figure #customer {
+  height: 299px;
+  background: url("../files/customer.png");
+  background-size: cover;
+}
+#Main #exhibit #containerExhibit figure figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 250%;
+  margin-top: 20px;
+}
+#Main #exhibit #containerExhibit figure article {
+  text-align: center;
+  font-size: 130%;
+  margin-top: 10px;
+}
+#Main #co-worker {
+  background: url("../files/employees-background.png") no-repeat 85% 0;
+  background-size: contain;
+}
+#Main #co-worker h1 {
+  font-size: 216%;
+  margin: 8% 0 0 -30%;
+  transition: margin 0.5s ease-out;
+}
+#Main #co-worker hr {
+  width: 30%;
+  margin: 2% 0 0 8%;
+}
+#Main #employees {
+  grid-area: employees;
+  text-align: center;
+  line-height: 1.5;
+}
+#Main #employees #container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#Main #employees #container div {
+  width: 320px;
+  height: 750px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#Main #employees #container div #employee1 {
+  background-image: url("../files/Yuri.JPG");
+  background-size: cover;
+  height: 350px;
+  width: 273px;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  transition: filter .1s linear;
+}
+#Main #employees #container div #employee1:hover {
+  filter: drop-shadow(0 0 5px black) saturate(200%);
+}
+#Main #employees #container div #employee2 {
+  background-image: url(../files/Tanya.JPG);
+  background-size: cover;
+  height: 350px;
+  width: 273px;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  transition: filter .1s linear;
+}
+#Main #employees #container div #employee2:hover {
+  filter: drop-shadow(0 0 5px black) saturate(200%);
+}
+#Main #employees #container div #employee3 {
+  background-image: url(../files/Olga.jpg);
+  background-size: cover;
+  height: 350px;
+  width: 273px;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  transition: filter .1s linear;
+}
+#Main #employees #container div #employee3:hover {
+  filter: drop-shadow(0 0 5px black) saturate(200%);
+}
+#Main #employees #container div article {
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+}
+#Main #get {
+  grid-area: main2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(63, 255, 0, 0.07);
+}
+#Main #get article {
+  line-height: 1.5;
+  text-align: justify;
+  margin-top: 30%;
+  transition: margin-top 1s ease-out;
+}
+#Main #get article h1 {
+  font-size: 216%;
+  text-align: center;
+  margin-top: 70px;
+}
+#Main #get article hr {
+  width: 50%;
+}
+#Main #get article p {
+  font-size: 120%;
+  margin: 4% 10% 4% 10%;
+}
+#Main #get article p::before {
+  content: "\2713";
+  color: green;
+  font-size: 250%;
+  float: left;
+  margin: -2% 2% 1% 0;
+}
+#Main #get article p:hover::before {
+  filter: hue-rotate(90deg);
+}
+#Main #social {
+  position: relative;
+  grid-area: social;
+  background-image: url("../files/social-background.png");
+}
+#Main #social article {
+  font-size: 120%;
+  line-height: 1.5;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 2px black;
+}
+#Main #social article .icon.big {
+  position: absolute;
+  width: 200px;
+  height: 190px;
+  filter: brightness(110%) contrast(210%);
+  transition: transform .2s linear;
+}
+#Main #social article .icon.big:hover {
+  filter: grayscale(100%);
+}
+#Main #social article .icon.big.ico1 {
+  left: 3%;
+  bottom: 2%;
+  transform: rotate(-15deg);
+  background-position: 0 0;
+}
+#Main #social article .icon.big.ico1:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+#Main #social article .icon.big.ico2 {
+  right: 5%;
+  bottom: 2%;
+  transform: rotate(20deg);
+  background-position: -200px 0;
+}
+#Main #social article .icon.big.ico2:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+#Main #social article .icon.big.ico3 {
+  left: 33%;
+  bottom: 6%;
+  transform: rotate(-2deg);
+  background-position: -400px 0;
+}
+#Main #social article .icon.big.ico3:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+#Main #social article .icon.big.ico5 {
+  bottom: 15%;
+  left: 18%;
+  transform: rotate(-10deg);
+  background-position: -400px -190px;
+}
+#Main #social article .icon.big.ico5:hover {
+  transform: scale(1.2) rotate(-15deg);
+}
+#Main #social article .icon.big.ico6 {
+  right: 18%;
+  bottom: 20%;
+  transform: rotate(-10deg);
+  background-position: 0 -380px;
+}
+#Main #social article .icon.big.ico6:hover {
+  transform: scale(1.2) rotate(-15deg);
+}
+#Main #social article .icon.big.ico7 {
+  right: 35%;
+  bottom: 10%;
+  transform: rotate(15deg);
+  background-position: -400px -380px;
+}
+#Main #social article .icon.big.ico7:hover {
+  transform: scale(1.2) rotate(-15deg);
+}
+#Main #social article h1 {
+  font-size: 180%;
+  margin-top: 70px;
+}
+#Main #social article hr {
+  width: 50%;
+  border: 1px solid white;
+}
+#Main #social article p {
+  margin: 40px 100px 50px 100px;
+}
+#Main #achievements {
+  grid-area: achievements;
+  background: url("../files/Achievements-background.jpg") 0 -400px;
+  background-size: cover;
+  line-height: 1.5;
+}
+#Main #achievements h1 {
+  font-size: 210%;
+  margin: 8% 0 0 -30%;
+  transition: margin 0.5s ease-out;
+}
+#Main #achievements hr {
+  width: 30%;
+  margin: 2% 0 0 8%;
+}
+#Main #reviews {
+  grid-area: reviews;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Main #reviews p {
+  font-size: 120%;
+  margin: 70px 200px 20px 200px;
+  text-align: justify;
+  line-height: 1.5;
+  clear: right;
+}
+#Main #reviews p::before {
+  content: "\1F3C6";
+  font-size: 250%;
+  float: left;
+  margin: 1% 3% 8% 0;
+}
+#Main #reviews p:hover::before {
+  filter: sepia(100%);
+}
+#Main #reviews h1 {
+  font-size: 210%;
+}
+#Main #reviews hr {
+  width: 50%;
+  margin-bottom: 50px;
+}
+#Main #reviews #reviewsSlide {
+  height: 25%;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(32, 110, 0, 0.1);
+  border-radius: 15px 15px 0 0;
+  margin: 0 0 0 -250%;
+  transition: margin 1s ease-out;
+}
+#Main #reviews #reviewsSlide:hover #left {
+  opacity: 1;
+}
+#Main #reviews #reviewsSlide:hover #right {
+  opacity: 1;
+}
+#Main #reviews #reviewsSlide #left {
+  position: absolute;
+  opacity: 0;
+  top: 45%;
+  left: 0;
+  height: 12%;
+  width: 7%;
+  transition: opacity .2s linear;
+}
+#Main #reviews #reviewsSlide #right {
+  position: absolute;
+  opacity: 0;
+  top: 45%;
+  right: 0;
+  height: 12%;
+  width: 7%;
+  transition: opacity .2s linear;
+}
+#Main #reviews #reviewsSlide .slide {
+  width: 6600px;
+  height: 100%;
+  padding: 0;
+  margin-left: -2200px;
+  font-size: 0;
+  transition: margin-left 0.5s linear;
+}
+#Main #reviews #reviewsSlide .slide li {
+  display: inline-block;
+  width: 1100px;
+  height: 100%;
+  font-size: 20px;
+}
+#Main #reviews #reviewsSlide .slide li .photo {
+  float: left;
+  width: 400px;
+  height: 300px;
+  border-radius: 15px 0 15px 0;
+}
+#Main #reviews #reviewsSlide .slide li .photo.first {
+  background: url("../files/review1.jpg");
+  background-size: cover;
+}
+#Main #reviews #reviewsSlide .slide li .photo.second {
+  background: url("../files/review2.jpg");
+  background-size: cover;
+}
+#Main #reviews #reviewsSlide .slide li .photo.third {
+  background: url("../files/review3.jpeg");
+  background-size: cover;
+}
+#Main #reviews #reviewsSlide .slide li .photo.fourth {
+  background: url("../files/review4.jpg");
+  background-size: cover;
+}
+#Main #reviews #reviewsSlide .slide li .photo.five {
+  background: url("../files/review5.jpg");
+  background-size: cover;
+}
+#Main #reviews #reviewsSlide .slide li .job {
+  float: left;
+  width: 35%;
+  height: 30%;
+  color: black;
+  clear: left;
+  margin: 20px;
+  font-size: 100%;
+}
+#Main #reviews #reviewsSlide .slide li .review {
+  float: left;
+  width: 50%;
+  margin: 3%;
+  height: 40%;
+  font-size: 100%;
+}
+#Main #reviews #reviewsSlide .slide li .sub {
+  float: left;
+  width: 50%;
+  height: 10%;
+  margin: 50px;
+  font-size: 100%;
+}
+#Main #contact {
+  grid-area: contact;
+  background: grey;
+}
+#Main #contact h1 {
+  font-size: 200%;
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+}
+#Main #contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 450px;
+  height: 65%;
+  margin: 50px auto 40px auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background: white;
+}
+#Main #contact form input {
+  border: none;
+  font-size: 100%;
+  height: 16%;
+  padding-left: 20px;
+  font-style: italic;
+  color: grey;
+}
+#Main #contact form input:first-of-type {
+  margin-top: 5px;
+}
+#Main #contact form input[type="button"] {
+  color: #fff;
+  font-weight: bold;
+  font-size: 120%;
+  font-style: normal;
+  width: 100%;
+  height: 20%;
+  background: #008b00;
+  border: 1px solid #008b00;
+  border-radius: 0 0 5px 5px;
+  text-shadow: 0 0 5px black;
+  margin: 0;
+}
+#Main footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: foote;
+  background: #424242;
+  color: white;
+}
+#Main footer a {
+  text-decoration: none;
+  color: white;
+}
+#Main footer hr {
+  width: 30%;
+  border: 1px solid white;
+  margin: -10px 0 0 0;
+}
+#Main footer article {
+  width: 25%;
+  height: 70%;
+  padding: 20px 20px 0 60px;
+}
+#Main footer article h1 {
+  font-size: 120%;
+  margin-bottom: 20px;
+}
+#Main footer article h1:nth-of-type(2n) {
+  margin-top: 40px;
+}
+#Main footer article div {
+  margin: 40px 0 10px -15px;
+}
+#Main footer article div .icon.small {
+  width: 62px;
+  height: 45px;
+  background-size: auto 150px;
+  filter: brightness(1500%);
+}
+#Main footer article div .icon.small:hover {
+  filter: brightness(100%) contrast(200%);
+}
+#Main footer article div .icon.small.ico1 {
+  background-position: 0 0;
+}
+#Main footer article div .icon.small.ico2 {
+  background-position: -50px 0;
+}
+#Main footer article div .icon.small.ico3 {
+  background-position: -100px 0;
+}
+#Main footer article div .icon.small.ico4 {
+  background-position: -50px -47px;
+}
+#Main footer article div .icon.small.ico5 {
+  background-position: -100px -47px;
+}
+#Main footer article div .icon.small.ico6 {
+  background-position: -100px -97px;
+}
+#Main footer article ul {
+  height: 30%;
+  width: 20%;
+}
+#Main footer article ul li {
+  width: 300%;
+  padding: 5px;
+}
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  html,
+  body {
+    font-size: 25px;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+    grid-template-rows: 130px 950px 1000px 850px 582px 1fr 973px 840px 518px 1900px 1050px 518px;
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  #Main #Menu #Logo {
+    height: 125px;
+    width: 150px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+  }
+  #Main #Menu nav {
+    position: absolute;
+    left: 15%;
+    height: 100%;
+    width: 85%;
+  }
+  #Main #Menu nav ul {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  #Main #Menu nav ul #button {
+    padding: 0;
+  }
+  #Main #Menu nav ul #button form {
+    width: 140%;
+  }
+  #Main #Menu nav ul #button form input[type="button"] {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 -4px #848484 inset, 0 0 5px rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    font-size: 100%;
+    color: #484848;
+    font-weight: bold;
+    border: 1px solid #747474;
+    border-radius: 15px 0 0 0;
+    width: 100%;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:hover {
+    background: #009c00;
+    color: #ffffff;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.7), 0 -5px #047200 inset;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:active {
+    box-shadow: 0 3px 3px #045d00 inset, 0 0 5px rgba(0, 0, 0, 0.7), 0 -2px #045d00 inset;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    padding: 35px 40px 15px 40px;
+    font-size: 105%;
+    text-transform: uppercase;
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: visible;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 100%;
+    left: -18%;
+    padding: 0 5% 1% 5%;
+    width: 108%;
+    height: 125%;
+    background-color: rgba(59, 193, 145, 0.5);
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: 24% 0;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #Menu nav ul li:first-child > ul a {
+    text-decoration: none;
+    font-size: 110%;
+    color: white;
+    text-shadow: 0 0 7px black;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul a:hover {
+    color: #cfcad0;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    transform: scale(1);
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background: #3bc191;
+  }
+  #Main .slider #first {
+    height: 950px;
+    width: 100%;
+    animation: slide-1 40s infinite linear, zoom-1 40s infinite linear;
+  }
+  #Main .slider #second {
+    height: 950px;
+    width: 100%;
+    animation: slide-2 40s infinite, zoom-2 40s infinite linear;
+  }
+  #Main .slider #third {
+    height: 950px;
+    width: 100%;
+    animation: slide-3 40s infinite, zoom-3 40s infinite linear;
+  }
+  #Main .slider #fourth {
+    height: 950px;
+    width: 100%;
+    animation: slide-4 40s infinite, zoom-4 40s infinite linear;
+  }
+  #Main .slider article {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    height: 600px;
+    width: 50%;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+    font-family: Comic-Relief, sans-serif;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article p {
+    font-size: 160%;
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+  }
+  #Main .slider article h1 {
+    font-size: 250%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+  }
+  #Main .slider article form {
+    width: 300px;
+    height: 100px;
+  }
+  #Main .slider article form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+    width: 100%;
+    height: 100%;
+    background: #008b00;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0 0 7px black;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+  }
+  #Main .slider article form input[type="submit"]:hover {
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider article form input[type="submit"]:active {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider div {
+    position: absolute;
+    left: 0;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+  #Main #best {
+    grid-area: main1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 1.5;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #best article {
+    font-size: 120%;
+    height: 100%;
+    margin-top: 50%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #best article h1 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 180%;
+  }
+  #Main #best article hr {
+    width: 50%;
+  }
+  #Main #best article p {
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #best article p::before {
+    content: "\002B";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: 0 3% 6% 0;
+  }
+  #Main #best article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #exhibit {
+    grid-area: exhibit;
+    background-color: #000000;
+    color: white;
+  }
+  #Main #exhibit h1 {
+    text-align: center;
+    font-size: 216%;
+    margin: 110px 0 60px 0;
+  }
+  #Main #exhibit #containerExhibit {
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+  }
+  #Main #exhibit #containerExhibit figure {
+    width: 301px;
+    margin: 0;
+  }
+  #Main #exhibit #containerExhibit figure #boat {
+    height: 299px;
+  }
+  #Main #exhibit #containerExhibit figure #oar {
+    height: 299px;
+  }
+  #Main #exhibit #containerExhibit figure #customer {
+    height: 299px;
+  }
+  #Main #exhibit #containerExhibit figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    margin-top: 20px;
+  }
+  #Main #exhibit #containerExhibit figure article {
+    text-align: center;
+    font-size: 130%;
+    margin-top: 10px;
+  }
+  #Main #co-worker h1 {
+    font-size: 216%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #co-worker hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #employees {
+    grid-area: employees;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #Main #employees #container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #Main #employees #container div {
+    width: 460px;
+    height: 1050px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #Main #employees #container div #employee1 {
+    height: 550px;
+    width: 420px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee1:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee2 {
+    height: 550px;
+    width: 420px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee2:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee3 {
+    height: 550px;
+    width: 420px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee3:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div article {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  #Main #employees #container div article h3 {
+    font-size: 110%;
+  }
+  #Main #get {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #get article {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 30%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #get article h1 {
+    font-size: 216%;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #get article hr {
+    width: 50%;
+  }
+  #Main #get article p {
+    font-size: 120%;
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #get article p::before {
+    content: "\2713";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: -2% 2% 1% 0;
+  }
+  #Main #get article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #social {
+    position: relative;
+    grid-area: social;
+  }
+  #Main #social article {
+    font-size: 120%;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+  }
+  #Main #social article .icon.big {
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    filter: brightness(110%) contrast(210%);
+    transition: transform .2s linear;
+  }
+  #Main #social article .icon.big:hover {
+    filter: grayscale(100%);
+  }
+  #Main #social article .icon.big.ico1 {
+    left: 3%;
+    bottom: 12%;
+    transform: rotate(-15deg) scale(1.6);
+    background-position: 0 0;
+  }
+  #Main #social article .icon.big.ico1:hover {
+    transform: scale(1.6) rotate(-5deg);
+  }
+  #Main #social article .icon.big.ico2 {
+    right: 7%;
+    bottom: 12%;
+    transform: rotate(20deg) scale(1.6);
+    background-position: -200px 0;
+  }
+  #Main #social article .icon.big.ico2:hover {
+    transform: scale(2) rotate(5deg);
+  }
+  #Main #social article .icon.big.ico3 {
+    left: 35%;
+    bottom: 14%;
+    transform: rotate(-2deg) scale(1.6);
+    background-position: -400px 0;
+  }
+  #Main #social article .icon.big.ico3:hover {
+    transform: scale(2) rotate(15deg);
+  }
+  #Main #social article .icon.big.ico5 {
+    bottom: 32%;
+    left: 18%;
+    transform: rotate(-10deg) scale(1.6);
+    background-position: -400px -190px;
+  }
+  #Main #social article .icon.big.ico5:hover {
+    transform: scale(2) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico6 {
+    right: 18%;
+    bottom: 34%;
+    transform: rotate(-10deg) scale(1.6);
+    background-position: 0 -380px;
+  }
+  #Main #social article .icon.big.ico6:hover {
+    transform: scale(2) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico7 {
+    right: 35%;
+    bottom: 20%;
+    transform: rotate(15deg) scale(1.6);
+    background-position: -400px -380px;
+  }
+  #Main #social article .icon.big.ico7:hover {
+    transform: scale(2) rotate(-15deg);
+  }
+  #Main #social article h1 {
+    font-size: 180%;
+    margin-top: 70px;
+  }
+  #Main #social article hr {
+    width: 50%;
+    border: 1px solid white;
+  }
+  #Main #social article p {
+    margin: 40px 100px 50px 100px;
+  }
+  #Main #achievements {
+    grid-area: achievements;
+    line-height: 1.5;
+  }
+  #Main #achievements h1 {
+    font-size: 210%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #achievements hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 120%;
+    margin: 90px 200px 20px 200px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #Main #reviews h1 {
+    font-size: 210%;
+  }
+  #Main #reviews hr {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  #Main #reviews #reviewsSlide {
+    height: 25%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 15%;
+    width: 10%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 15%;
+    width: 10%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 9600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -3200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1600px;
+    height: 100%;
+    font-size: 30px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 25%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 60%;
+    margin: 50px;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 50%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+  #Main #contact {
+    grid-area: contact;
+    background: grey;
+  }
+  #Main #contact h1 {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+  }
+  #Main #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    height: 650px;
+    margin: 90px auto 60px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #contact form input {
+    border: none;
+    font-size: 100%;
+    height: 16%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #contact form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #contact form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    width: 25%;
+    height: 70%;
+    padding: 20px 20px 0 60px;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 17px;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 120%;
+    margin: 70px 200px 20px 200px;
+    text-align: justify;
+    line-height: 1.5;
+    clear: right;
+  }
+  #Main #reviews p::before {
+    content: "\1F3C6";
+    font-size: 250%;
+    float: left;
+    margin: 1% 3% 8% 0;
+  }
+  #Main #reviews p:hover::before {
+    filter: sepia(100%);
+  }
+  #Main #reviews h1 {
+    font-size: 210%;
+  }
+  #Main #reviews hr {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  #Main #reviews #reviewsSlide {
+    height: 25%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 6600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -2200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1100px;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.first {
+    background: url("../files/review1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.second {
+    background: url("../files/review2.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.third {
+    background: url("../files/review3.jpeg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.fourth {
+    background: url("../files/review4.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.five {
+    background: url("../files/review5.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 35%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 35%;
+    margin: 3%;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 50%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 1060px) {
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+    grid-template-rows: 77px 637px 764px 605px 382px 1fr 573px 640px 318px 1600px 701px 318px;
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+  }
+  #Main #Menu nav {
+    height: 100%;
+    width: 85%;
+  }
+  #Main #Menu nav ul {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  #Main #Menu nav ul #button {
+    padding: 0;
+  }
+  #Main #Menu nav ul #button form {
+    width: 140%;
+  }
+  #Main #Menu nav ul #button form input[type="button"] {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 -2px #848484 inset, 0 0 3px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 100%;
+    color: #484848;
+    font-weight: bold;
+    border: 1px solid #747474;
+    border-radius: 10px 0 0 0;
+    width: 100%;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:hover {
+    background: #009c00;
+    color: #ffffff;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7), 0 -3px #047200 inset;
+  }
+  #Main #Menu nav ul #button form input[type="button"]:active {
+    box-shadow: 0 1px 1px #045d00 inset, 0 0 3px rgba(0, 0, 0, 0.7), 0 -1px #045d00 inset;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    padding: 35px 20px 15px 20px;
+    font-size: 105%;
+    text-transform: uppercase;
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: visible;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 77px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 125%;
+    background-color: rgba(59, 193, 145, 0.5);
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: 24% 0;
+    transition: transform 0.3s ease-out;
+  }
+  #Main #Menu nav ul li:first-child > ul li {
+    padding: 0;
+  }
+  #Main #Menu nav ul li:first-child > ul li a {
+    text-decoration: none;
+    font-size: 110%;
+    color: white;
+    text-shadow: 0 0 7px black;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a:hover {
+    color: #cfcad0;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    transform: scale(1);
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: visible;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background: #3bc191;
+  }
+  #Main .slider #first {
+    height: 637px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(../files/1920x1080/1.jpg);
+    animation: slide-1 40s infinite linear, zoom-1 40s infinite linear;
+  }
+  #Main .slider #second {
+    height: 637px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../files/1920x1080/2.jpg");
+    animation: slide-2 40s infinite, zoom-2 40s infinite linear;
+  }
+  #Main .slider #third {
+    height: 637px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../files/1920x1080/3.jpg");
+    animation: slide-3 40s infinite, zoom-3 40s infinite linear;
+  }
+  #Main .slider #fourth {
+    height: 637px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("../files/1920x1080/4.jpg");
+    animation: slide-4 40s infinite, zoom-4 40s infinite linear;
+  }
+  #Main .slider article {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    height: 60%;
+    width: 40%;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+    font-family: Comic-Relief, sans-serif;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article p {
+    font-size: 160%;
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+  }
+  #Main .slider article h1 {
+    font-size: 250%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+  }
+  #Main .slider article form {
+    width: 200px;
+    height: 80px;
+  }
+  #Main .slider article form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+    width: 100%;
+    height: 100%;
+    background: #008b00;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+  }
+  #Main .slider article form input[type="submit"]:hover {
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider article form input[type="submit"]:active {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider div {
+    position: absolute;
+    left: 0;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+  #Main #best {
+    grid-area: main1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 1.5;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #best article {
+    font-size: 120%;
+    height: 100%;
+    margin-top: 50%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #best article h1 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 180%;
+  }
+  #Main #best article hr {
+    width: 50%;
+  }
+  #Main #best article p {
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #best article p::before {
+    content: "\002B";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: 0 3% 8% 0;
+  }
+  #Main #best article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #exhibit {
+    grid-area: exhibit;
+    background-color: #000000;
+    color: white;
+  }
+  #Main #exhibit h1 {
+    text-align: center;
+    font-size: 216%;
+    margin: 70px 0 20px 0;
+  }
+  #Main #exhibit #containerExhibit {
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+  }
+  #Main #exhibit #containerExhibit figure {
+    width: 251px;
+    margin-top: 50px;
+  }
+  #Main #exhibit #containerExhibit figure #boat {
+    height: 240px;
+    background: url("../files/boat.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #oar {
+    height: 240px;
+    background: url("../files/oar.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #customer {
+    height: 240px;
+    background: url("../files/customer.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    margin-top: 20px;
+  }
+  #Main #exhibit #containerExhibit figure article {
+    text-align: center;
+    font-size: 130%;
+    margin-top: 10px;
+  }
+  #Main #co-worker {
+    background: url("../files/employees-background.png") no-repeat 115% 0;
+    background-size: contain;
+  }
+  #Main #co-worker h1 {
+    font-size: 216%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #co-worker hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #employees {
+    grid-area: employees;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #Main #employees #container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #Main #employees #container div {
+    width: 320px;
+    height: 750px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #Main #employees #container div #employee1 {
+    background-image: url("../files/Yuri.JPG");
+    background-size: cover;
+    height: 350px;
+    width: 273px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee1:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee2 {
+    background-image: url(../files/Tanya.JPG);
+    background-size: cover;
+    height: 350px;
+    width: 273px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee2:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee3 {
+    background-image: url(../files/Olga.jpg);
+    background-size: cover;
+    height: 350px;
+    width: 273px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee3:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div article {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  #Main #get {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #get article {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 30%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #get article h1 {
+    font-size: 216%;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #get article hr {
+    width: 50%;
+  }
+  #Main #get article p {
+    font-size: 120%;
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #get article p::before {
+    content: "\2713";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: -2% 2% 1% 0;
+  }
+  #Main #get article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #social {
+    position: relative;
+    grid-area: social;
+    background-image: url("../files/social-background.png");
+  }
+  #Main #social article {
+    font-size: 120%;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+  }
+  #Main #social article .icon.big {
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    filter: brightness(110%) contrast(210%);
+    transition: transform .2s linear;
+  }
+  #Main #social article .icon.big:hover {
+    filter: grayscale(100%);
+  }
+  #Main #social article .icon.big.ico1 {
+    left: 1%;
+    bottom: 2%;
+    transform: rotate(-15deg) scale(0.7);
+    background-position: 0 0;
+  }
+  #Main #social article .icon.big.ico1:hover {
+    transform: scale(0.8) rotate(-5deg);
+  }
+  #Main #social article .icon.big.ico2 {
+    right: 2%;
+    bottom: 2%;
+    transform: rotate(20deg) scale(0.7);
+    background-position: -200px 0;
+  }
+  #Main #social article .icon.big.ico2:hover {
+    transform: scale(0.8) rotate(5deg);
+  }
+  #Main #social article .icon.big.ico3 {
+    left: 30%;
+    bottom: 6%;
+    transform: rotate(-2deg) scale(0.7);
+    background-position: -400px 0;
+  }
+  #Main #social article .icon.big.ico3:hover {
+    transform: scale(0.8) rotate(15deg);
+  }
+  #Main #social article .icon.big.ico5 {
+    bottom: 15%;
+    left: 15%;
+    transform: rotate(-10deg) scale(0.7);
+    background-position: -400px -190px;
+  }
+  #Main #social article .icon.big.ico5:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico6 {
+    right: 15%;
+    bottom: 20%;
+    transform: rotate(-10deg) scale(0.7);
+    background-position: 0 -380px;
+  }
+  #Main #social article .icon.big.ico6:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico7 {
+    right: 31%;
+    bottom: 10%;
+    transform: rotate(15deg) scale(0.7);
+    background-position: -400px -380px;
+  }
+  #Main #social article .icon.big.ico7:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article h1 {
+    font-size: 180%;
+    margin-top: 70px;
+  }
+  #Main #social article hr {
+    width: 50%;
+    border: 1px solid white;
+  }
+  #Main #social article p {
+    margin: 40px 100px 50px 100px;
+  }
+  #Main #achievements {
+    grid-area: achievements;
+    background: url("../files/Achievements-background.jpg") 0 -100px;
+    background-size: cover;
+    line-height: 1.5;
+  }
+  #Main #achievements h1 {
+    font-size: 210%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #achievements hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 120%;
+    width: 80%;
+    margin: 70px 200px 20px 200px;
+    text-align: justify;
+    line-height: 1.5;
+    clear: right;
+  }
+  #Main #reviews p::before {
+    content: "\1F3C6";
+    font-size: 250%;
+    float: left;
+    margin: 1% 3% 3% 0;
+  }
+  #Main #reviews p:hover::before {
+    filter: sepia(100%);
+  }
+  #Main #reviews h1 {
+    font-size: 210%;
+  }
+  #Main #reviews hr {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  #Main #reviews #reviewsSlide {
+    height: 25%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 6600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -2200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1100px;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.first {
+    background: url("../files/review1.jpg") -100px;
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.second {
+    background: url("../files/review2.jpg") -100px;
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.third {
+    background: url("../files/review3.jpeg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.fourth {
+    background: url("../files/review4.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.five {
+    background: url("../files/review5.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 25%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 30%;
+    margin: 50px;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 30%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+  #Main #contact {
+    grid-area: contact;
+    background: grey;
+  }
+  #Main #contact h1 {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 65%;
+    margin: 50px auto 40px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #contact form input {
+    border: none;
+    font-size: 100%;
+    height: 16%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #contact form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #contact form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    width: 25%;
+    height: 70%;
+    padding: 20px 20px 0 60px;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+  #hamburger {
+    background: url("../files/hamburger.png") no-repeat 100px;
+    background-size: contain;
+    height: 100%;
+    width: 200px;
+  }
+  #Main #Menu .visible {
+    display: flex;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+    grid-template-rows: 77px 300px 564px 1100px 182px 1fr 573px 440px 150px 700px 701px 918px;
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+  }
+  #Main #Menu nav {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    height: 300px;
+    width: 100px;
+    z-index: 10;
+    background-color: #fff;
+  }
+  #Main #Menu nav ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  #Main #Menu nav ul #button {
+    display: none;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    width: 100px;
+    height: 101px;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+    padding: 38px 5px 0 17px;
+    font-size: 105%;
+    text-transform: uppercase;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 110%;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(even) {
+    display: none;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 299px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li:first-child > ul li {
+    display: block;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 110%;
+    color: black;
+    text-shadow: none;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a:hover {
+    color: black;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    display: none;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../files/1920x1080/1.jpg);
+  }
+  #Main .slider #first {
+    display: none;
+  }
+  #Main .slider #second {
+    display: none;
+  }
+  #Main .slider #third {
+    display: none;
+  }
+  #Main .slider #fourth {
+    display: none;
+  }
+  #Main .slider article {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    height: 200px;
+    width: 400px;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+    font-family: Comic-Relief, sans-serif;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article p {
+    font-size: 160%;
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+  }
+  #Main .slider article h1 {
+    font-size: 250%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+  }
+  #Main .slider article form {
+    width: 200px;
+    height: 50px;
+  }
+  #Main .slider article form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+    width: 100%;
+    height: 100%;
+    background: #008b00;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+  }
+  #Main .slider article form input[type="submit"]:hover {
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider article form input[type="submit"]:active {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #best {
+    grid-area: main1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 1.5;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #best article {
+    font-size: 110%;
+    height: 100%;
+    margin-top: 50%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #best article h1 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 180%;
+  }
+  #Main #best article hr {
+    width: 50%;
+  }
+  #Main #best article p {
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #best article p::before {
+    content: "\002B";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: 0 3% 10% 0;
+  }
+  #Main #best article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #exhibit {
+    grid-area: exhibit;
+    background-color: #000000;
+    color: white;
+  }
+  #Main #exhibit h1 {
+    text-align: center;
+    font-size: 216%;
+    margin: 70px 0 20px 0;
+  }
+  #Main #exhibit #containerExhibit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+  }
+  #Main #exhibit #containerExhibit figure {
+    width: 201px;
+    margin: 0;
+  }
+  #Main #exhibit #containerExhibit figure #boat {
+    height: 199px;
+    background: url("../files/boat.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #oar {
+    height: 199px;
+    background: url("../files/oar.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #customer {
+    height: 199px;
+    background: url("../files/customer.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    margin-top: 0;
+  }
+  #Main #exhibit #containerExhibit figure article {
+    text-align: center;
+    font-size: 130%;
+    margin-bottom: 40px;
+  }
+  #Main #co-worker {
+    background: url("../files/employees-background.png") no-repeat 85% 0;
+    background-size: contain;
+  }
+  #Main #co-worker h1 {
+    font-size: 216%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #co-worker hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #employees {
+    grid-area: employees;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #Main #employees #container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #Main #employees #container div {
+    width: 220px;
+    height: 650px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #Main #employees #container div #employee1 {
+    background-image: url("../files/Yuri.JPG");
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee1:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee2 {
+    background-image: url(../files/Tanya.JPG);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee2:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee3 {
+    background-image: url(../files/Olga.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee3:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div article {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  #Main #get {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #get article {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 30%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #get article h1 {
+    font-size: 216%;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #get article hr {
+    width: 50%;
+  }
+  #Main #get article p {
+    font-size: 110%;
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #get article p::before {
+    content: "\2713";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: -2% 2% 1% 0;
+  }
+  #Main #get article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #social {
+    position: relative;
+    grid-area: social;
+    background-image: url("../files/social-background.png");
+  }
+  #Main #social article {
+    font-size: 120%;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+  }
+  #Main #social article .icon.big {
+    position: absolute;
+    width: 200px;
+    height: 190px;
+    filter: brightness(110%) contrast(210%);
+    transition: transform .2s linear;
+  }
+  #Main #social article .icon.big:hover {
+    filter: grayscale(100%);
+  }
+  #Main #social article .icon.big.ico1 {
+    left: -4%;
+    bottom: 2%;
+    transform: rotate(-15deg) scale(0.6);
+    background-position: 0 0;
+  }
+  #Main #social article .icon.big.ico1:hover {
+    transform: scale(0.8) rotate(-5deg);
+  }
+  #Main #social article .icon.big.ico2 {
+    right: 0;
+    bottom: 2%;
+    transform: rotate(20deg) scale(0.6);
+    background-position: -200px 0;
+  }
+  #Main #social article .icon.big.ico2:hover {
+    transform: scale(0.8) rotate(5deg);
+  }
+  #Main #social article .icon.big.ico3 {
+    left: 18%;
+    bottom: 6%;
+    transform: rotate(-2deg) scale(0.6);
+    background-position: -400px 0;
+  }
+  #Main #social article .icon.big.ico3:hover {
+    transform: scale(0.8) rotate(15deg);
+  }
+  #Main #social article .icon.big.ico5 {
+    bottom: 27%;
+    left: 15%;
+    transform: rotate(-10deg) scale(0.6);
+    background-position: -400px -190px;
+  }
+  #Main #social article .icon.big.ico5:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico6 {
+    right: 15%;
+    bottom: 27%;
+    transform: rotate(-10deg) scale(0.6);
+    background-position: 0 -380px;
+  }
+  #Main #social article .icon.big.ico6:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article .icon.big.ico7 {
+    right: 26%;
+    bottom: 10%;
+    transform: rotate(15deg) scale(0.6);
+    background-position: -400px -380px;
+  }
+  #Main #social article .icon.big.ico7:hover {
+    transform: scale(0.8) rotate(-15deg);
+  }
+  #Main #social article h1 {
+    font-size: 180%;
+    margin-top: 70px;
+  }
+  #Main #social article hr {
+    width: 50%;
+    border: 1px solid white;
+  }
+  #Main #social article p {
+    margin: 40px 100px 50px 100px;
+  }
+  #Main #achievements {
+    grid-area: achievements;
+    background: url("../files/Achievements-background.jpg") 0 -200px;
+    background-size: cover;
+    line-height: 1.5;
+  }
+  #Main #achievements h1 {
+    font-size: 210%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #achievements hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 110%;
+    width: 80%;
+    margin: 70px 200px 20px 200px;
+    text-align: justify;
+    line-height: 1.5;
+    clear: right;
+  }
+  #Main #reviews p::before {
+    content: "\1F3C6";
+    font-size: 250%;
+    float: left;
+    clear: both;
+    margin: 0 5% 15% 0;
+  }
+  #Main #reviews p:hover::before {
+    filter: sepia(100%);
+  }
+  #Main #reviews h1 {
+    font-size: 0;
+  }
+  #Main #reviews hr {
+    width: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  #Main #reviews #reviewsSlide {
+    display: none;
+    height: 35%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 6600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -2200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1100px;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.first {
+    background: url("../files/aboutus.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.second {
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.third {
+    background: url("../files/Baidarka1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.fourth {
+    background: url("../files/Baidarka2.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.five {
+    background: url("../files/katamaran1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 25%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 30%;
+    margin: 50px;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 30%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+  #Main #contact {
+    grid-area: contact;
+    background: grey;
+  }
+  #Main #contact h1 {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 55%;
+    margin: 50px auto 40px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #contact form input {
+    border: none;
+    font-size: 100%;
+    height: 16%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #contact form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #contact form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    width: 55%;
+    height: 70%;
+    font-size: 120%;
+    padding: 20px 20px 0 30px;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+    width: 300px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    background-size: auto 150px;
+    filter: brightness(1500%);
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    transform: scale(0.8);
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    transform: scale(0.8);
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    transform: scale(0.8);
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    transform: scale(0.8);
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    transform: scale(0.8);
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    transform: scale(0.8);
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 40%;
+    width: 20%;
+  }
+  #Main footer article ul li {
+    width: 200%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+  #hamburger {
+    background: url("../files/hamburger.png") no-repeat 100px;
+    background-size: contain;
+    height: 100%;
+    width: 200px;
+  }
+  #Main #Menu .visible {
+    display: flex;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+    grid-template-rows: 77px 300px 664px 1100px 182px 1fr 973px 500px 150px 800px 701px 918px;
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+  }
+  #Main #Menu nav {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    height: 300px;
+    width: 100px;
+    z-index: 10;
+    background-color: #fff;
+  }
+  #Main #Menu nav ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  #Main #Menu nav ul #button {
+    display: none;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    width: 100px;
+    height: 101px;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+    padding: 38px 5px 0 17px;
+    font-size: 105%;
+    text-transform: uppercase;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 110%;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(even) {
+    display: none;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 299px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li:first-child > ul li {
+    display: block;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 110%;
+    color: black;
+    text-shadow: none;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a:hover {
+    color: black;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    display: none;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../files/1920x1080/1.jpg);
+  }
+  #Main .slider #first {
+    display: none;
+  }
+  #Main .slider #second {
+    display: none;
+  }
+  #Main .slider #third {
+    display: none;
+  }
+  #Main .slider #fourth {
+    display: none;
+  }
+  #Main .slider article {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    height: 200px;
+    width: 400px;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+    font-family: Comic-Relief, sans-serif;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article p {
+    font-size: 160%;
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+  }
+  #Main .slider article h1 {
+    font-size: 250%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+  }
+  #Main .slider article form {
+    width: 200px;
+    height: 50px;
+  }
+  #Main .slider article form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+    width: 100%;
+    height: 100%;
+    background: #008b00;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+  }
+  #Main .slider article form input[type="submit"]:hover {
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider article form input[type="submit"]:active {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #best {
+    grid-area: main1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 1.5;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #best article {
+    font-size: 110%;
+    height: 100%;
+    margin-top: 50%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #best article h1 {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 180%;
+  }
+  #Main #best article hr {
+    width: 50%;
+  }
+  #Main #best article p {
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #best article p::before {
+    content: "\002B";
+    color: green;
+    font-size: 250%;
+    float: left;
+    height: 80px;
+    margin: 0 3% 22% 0;
+  }
+  #Main #best article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #exhibit {
+    grid-area: exhibit;
+    background-color: #000000;
+    color: white;
+  }
+  #Main #exhibit h1 {
+    text-align: center;
+    font-size: 216%;
+    margin: 70px 0 20px 0;
+  }
+  #Main #exhibit #containerExhibit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+  }
+  #Main #exhibit #containerExhibit figure {
+    width: 201px;
+    margin: 0;
+  }
+  #Main #exhibit #containerExhibit figure #boat {
+    height: 199px;
+    background: url("../files/boat.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #oar {
+    height: 199px;
+    background: url("../files/oar.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #customer {
+    height: 199px;
+    background: url("../files/customer.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    margin-top: 0;
+  }
+  #Main #exhibit #containerExhibit figure article {
+    text-align: center;
+    font-size: 130%;
+    margin-bottom: 40px;
+  }
+  #Main #co-worker {
+    background: url("../files/employees-background.png") no-repeat 85% 0;
+    background-size: contain;
+  }
+  #Main #co-worker h1 {
+    font-size: 216%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #co-worker hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #employees {
+    grid-area: employees;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #Main #employees #container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #Main #employees #container div {
+    width: 220px;
+    height: 650px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #Main #employees #container div #employee1 {
+    background-image: url("../files/Yuri.JPG");
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee1:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee2 {
+    background-image: url(../files/Tanya.JPG);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee2:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee3 {
+    background-image: url(../files/Olga.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee3:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div article {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  #Main #get {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #get article {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 30%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #get article h1 {
+    font-size: 216%;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #get article hr {
+    width: 50%;
+  }
+  #Main #get article p {
+    font-size: 110%;
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #get article p::before {
+    content: "\2713";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: -2% 2% 1% 0;
+  }
+  #Main #get article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #social {
+    position: relative;
+    grid-area: social;
+    background-image: url("../files/social-background.png");
+  }
+  #Main #social article {
+    font-size: 120%;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+  }
+  #Main #social article .icon.big {
+    position: static;
+    width: 200px;
+    height: 190px;
+    filter: brightness(110%) contrast(210%);
+    transition: transform .2s linear;
+  }
+  #Main #social article .icon.big:hover {
+    filter: grayscale(0);
+  }
+  #Main #social article .icon.big.ico1 {
+    transform: rotate(0) scale(0.6);
+    background-position: 0 0;
+  }
+  #Main #social article .icon.big.ico1:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico2 {
+    transform: rotate(0) scale(0.6);
+    background-position: -200px 0;
+  }
+  #Main #social article .icon.big.ico2:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico3 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px 0;
+  }
+  #Main #social article .icon.big.ico3:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico5 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px -190px;
+  }
+  #Main #social article .icon.big.ico5:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico6 {
+    transform: rotate(0) scale(0.6);
+    background-position: 0 -380px;
+  }
+  #Main #social article .icon.big.ico6:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico7 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px -380px;
+  }
+  #Main #social article .icon.big.ico7:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article h1 {
+    font-size: 180%;
+    margin-top: 70px;
+  }
+  #Main #social article hr {
+    width: 50%;
+    border: 1px solid white;
+  }
+  #Main #social article p {
+    margin: 40px 100px 50px 100px;
+  }
+  #Main #achievements {
+    grid-area: achievements;
+    background: url("../files/Achievements-background.jpg") 0 -100px;
+    background-size: cover;
+    line-height: 1.5;
+  }
+  #Main #achievements h1 {
+    font-size: 200%;
+    margin: 8% 0 0 -30%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #achievements hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 110%;
+    width: 80%;
+    margin: 70px 200px 20px 200px;
+    text-align: justify;
+    line-height: 1.5;
+    clear: right;
+  }
+  #Main #reviews p::before {
+    content: "\1F3C6";
+    font-size: 250%;
+    float: left;
+    clear: both;
+    margin: 0 5% 35% 0;
+  }
+  #Main #reviews p:hover::before {
+    filter: sepia(100%);
+  }
+  #Main #reviews h1 {
+    font-size: 0;
+  }
+  #Main #reviews hr {
+    width: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  #Main #reviews #reviewsSlide {
+    display: none;
+    height: 35%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 6600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -2200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1100px;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.first {
+    background: url("../files/aboutus.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.second {
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.third {
+    background: url("../files/Baidarka1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.fourth {
+    background: url("../files/Baidarka2.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.five {
+    background: url("../files/katamaran1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 25%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 30%;
+    margin: 50px;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 30%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+  #Main #contact {
+    grid-area: contact;
+    background: grey;
+  }
+  #Main #contact h1 {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 55%;
+    margin: 50px auto 40px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #contact form input {
+    border: none;
+    font-size: 100%;
+    height: 16%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #contact form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #contact form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    width: 55%;
+    height: 80%;
+    font-size: 120%;
+    padding: 20px 0 0 0;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+    width: 250px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    background-size: auto 150px;
+    filter: brightness(1500%);
+    margin: -5px;
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    transform: scale(0.7);
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    transform: scale(0.7);
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    transform: scale(0.7);
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    transform: scale(0.7);
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    transform: scale(0.7);
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    transform: scale(0.7);
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+    padding: 20px;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 422px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+  #hamburger {
+    background: url("../files/hamburger.png") no-repeat 100px;
+    background-size: contain;
+    height: 100%;
+    width: 200px;
+  }
+  #Main #Menu .visible {
+    display: flex;
+  }
+  #Main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "head" "slider" "main1" "exhibit" "co-worker" "employees" "social" "main2" "achievements" "reviews" "contact" "foote";
+    grid-template-rows: 77px 300px 564px 1100px 182px 1fr 1673px 400px 150px 800px 701px 1018px;
+    grid-template-columns: 100%;
+  }
+  #Main #Menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    grid-area: head;
+    background: white;
+    border-bottom: 1px solid black;
+    /* linear-gradient(to bottom, white,snow)  rgba(175, 230, 153, 0.1)*/
+    /*box-shadow: inset 0px -2px 7px black;*/
+  }
+  #Main #Menu #Logo {
+    height: 75px;
+    width: 80px;
+    background: url("../files/sayt1.png");
+    background-size: cover;
+    margin-left: 30px;
+    /*background:url("../files/sayt2.png") no-repeat 30px -11px;*/
+    /*sprites set height and width and then background-image*/
+  }
+  #Main #Menu nav {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 0;
+    height: 300px;
+    width: 100px;
+    z-index: 10;
+    background-color: #fff;
+  }
+  #Main #Menu nav ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  #Main #Menu nav ul #button {
+    display: none;
+  }
+  #Main #Menu nav ul li {
+    list-style-type: none;
+    width: 100px;
+    height: 101px;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+    padding: 38px 5px 0 17px;
+    font-size: 105%;
+    text-transform: uppercase;
+    border: 1px solid black;
+    /*-webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;*/
+  }
+  #Main #Menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 110%;
+  }
+  #Main #Menu nav ul li a:hover {
+    color: #00b737;
+  }
+  #Main #Menu nav ul li hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:nth-of-type(even) {
+    display: none;
+  }
+  #Main #Menu nav ul li:nth-of-type(odd):hover > hr {
+    visibility: hidden;
+  }
+  #Main #Menu nav ul li:first-child > ul {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -150px;
+    width: 150px;
+    height: 299px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
+    border: 1px solid black;
+  }
+  #Main #Menu nav ul li:first-child > ul li {
+    display: block;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 110%;
+    color: black;
+    text-shadow: none;
+    text-transform: none;
+  }
+  #Main #Menu nav ul li:first-child > ul li a:hover {
+    color: black;
+  }
+  #Main #Menu nav ul li:first-child:hover > ul {
+    display: none;
+  }
+  #Main .slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-size: cover;
+    background-image: url(../files/1920x1080/1.jpg);
+  }
+  #Main .slider #first {
+    display: none;
+  }
+  #Main .slider #second {
+    display: none;
+  }
+  #Main .slider #third {
+    display: none;
+  }
+  #Main .slider #fourth {
+    display: none;
+  }
+  #Main .slider article {
+    position: absolute;
+    top: 100%;
+    left: 4%;
+    height: 200px;
+    width: 250px;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+    font-family: Comic-Relief, sans-serif;
+    transition: top 1.4s ease-out;
+  }
+  #Main .slider article p {
+    font-size: 130%;
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+  }
+  #Main .slider article h1 {
+    font-size: 250%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+  }
+  #Main .slider article form {
+    width: 200px;
+    height: 50px;
+  }
+  #Main .slider article form input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+    width: 100%;
+    height: 100%;
+    background: #008b00;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 -5px #043b00 inset, 0 0 5px black;
+  }
+  #Main .slider article form input[type="submit"]:hover {
+    background: #009400;
+    box-shadow: 0 -5px #044800 inset, 0 0 10px black;
+  }
+  #Main .slider article form input[type="submit"]:active {
+    box-shadow: 0 4px 4px #044800 inset, 0 -3px #044800 inset, 0 0 10px black;
+  }
+  #Main #best {
+    grid-area: main1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 1.5;
+    background-color: rgba(63, 255, 0, 0.07);
+    /*rgba(0, 0, 0, 0.05)*/
+    /*background-image: url("../files/waterfall.png");*/
+  }
+  #Main #best article {
+    font-size: 100%;
+    height: 100%;
+    margin-top: 50%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #best article h1 {
+    text-align: center;
+    margin-top: 12%;
+    font-size: 180%;
+  }
+  #Main #best article hr {
+    width: 50%;
+  }
+  #Main #best article p {
+    margin: 4% 10% 4% 5%;
+  }
+  #Main #best article p::before {
+    content: "";
+    color: green;
+    font-size: 300%;
+    height: 110px;
+    margin: 0;
+  }
+  #Main #best article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #exhibit {
+    grid-area: exhibit;
+    background-color: #000000;
+    color: white;
+  }
+  #Main #exhibit h1 {
+    text-align: center;
+    font-size: 216%;
+    margin: 70px 0 20px 0;
+  }
+  #Main #exhibit #containerExhibit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+  }
+  #Main #exhibit #containerExhibit figure {
+    width: 201px;
+    margin: 0;
+  }
+  #Main #exhibit #containerExhibit figure #boat {
+    height: 199px;
+    background: url("../files/boat.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #oar {
+    height: 199px;
+    background: url("../files/oar.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure #customer {
+    height: 199px;
+    background: url("../files/customer.png");
+    background-size: cover;
+  }
+  #Main #exhibit #containerExhibit figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    margin-top: 0;
+  }
+  #Main #exhibit #containerExhibit figure article {
+    text-align: center;
+    font-size: 130%;
+    margin-bottom: 40px;
+  }
+  #Main #co-worker {
+    background: url("../files/employees-background.png") no-repeat 85% 0;
+    background-size: contain;
+  }
+  #Main #co-worker h1 {
+    font-size: 216%;
+    margin: 8% 0 0 -80%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #co-worker hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #employees {
+    grid-area: employees;
+    text-align: center;
+    line-height: 1.5;
+    /*h1 {
+        font-size: 216%;
+        margin-top:100px;
+      }
+      hr {
+        width: 50%;
+        margin-bottom: 50px; //828 130
+      }*/
+  }
+  #Main #employees #container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  #Main #employees #container div {
+    width: 220px;
+    height: 650px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #Main #employees #container div #employee1 {
+    background-image: url("../files/Yuri.JPG");
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee1:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee2 {
+    background-image: url(../files/Tanya.JPG);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee2:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div #employee3 {
+    background-image: url(../files/Olga.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 173px;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid black;
+    transition: filter .1s linear;
+  }
+  #Main #employees #container div #employee3:hover {
+    filter: drop-shadow(0 0 5px black) saturate(200%);
+  }
+  #Main #employees #container div article {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  #Main #get {
+    grid-area: main2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(63, 255, 0, 0.07);
+  }
+  #Main #get article {
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 30%;
+    transition: margin-top 1s ease-out;
+  }
+  #Main #get article h1 {
+    font-size: 216%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  #Main #get article hr {
+    width: 50%;
+  }
+  #Main #get article p {
+    font-size: 110%;
+    margin: 4% 10% 4% 10%;
+  }
+  #Main #get article p::before {
+    content: "";
+    color: green;
+    font-size: 250%;
+    float: left;
+    margin: 0;
+  }
+  #Main #get article p:hover::before {
+    filter: hue-rotate(90deg);
+  }
+  #Main #social {
+    position: relative;
+    grid-area: social;
+    background-image: url("../files/social-background.png");
+  }
+  #Main #social article {
+    font-size: 120%;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px black;
+  }
+  #Main #social article .icon.big {
+    position: static;
+    width: 200px;
+    height: 190px;
+    filter: brightness(110%) contrast(210%);
+    /*drop-shadow(0 0 2px black) */
+    transition: transform .2s linear;
+  }
+  #Main #social article .icon.big:hover {
+    filter: grayscale(0);
+  }
+  #Main #social article .icon.big.ico1 {
+    transform: rotate(0) scale(0.6);
+    background-position: 0 0;
+  }
+  #Main #social article .icon.big.ico1:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico2 {
+    transform: rotate(0) scale(0.6);
+    background-position: -200px 0;
+  }
+  #Main #social article .icon.big.ico2:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico3 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px 0;
+  }
+  #Main #social article .icon.big.ico3:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico5 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px -190px;
+  }
+  #Main #social article .icon.big.ico5:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico6 {
+    transform: rotate(0) scale(0.6);
+    background-position: 0 -380px;
+  }
+  #Main #social article .icon.big.ico6:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article .icon.big.ico7 {
+    transform: rotate(0) scale(0.6);
+    background-position: -400px -380px;
+  }
+  #Main #social article .icon.big.ico7:hover {
+    transform: scale(0.6) rotate(0);
+  }
+  #Main #social article h1 {
+    font-size: 180%;
+    margin-top: 70px;
+  }
+  #Main #social article hr {
+    width: 50%;
+    border: 1px solid white;
+  }
+  #Main #social article p {
+    margin: 40px 100px 50px 100px;
+  }
+  #Main #achievements {
+    grid-area: achievements;
+    background: url("../files/Achievements-background.jpg") 0 -100px;
+    background-size: cover;
+    line-height: 1.5;
+  }
+  #Main #achievements h1 {
+    font-size: 200%;
+    margin: 8% 0 0 -75%;
+    transition: margin 0.5s ease-out;
+  }
+  #Main #achievements hr {
+    width: 30%;
+    margin: 2% 0 0 8%;
+  }
+  #Main #reviews {
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Main #reviews p {
+    font-size: 110%;
+    width: 80%;
+    margin: 70px 200px 20px 200px;
+    text-align: justify;
+    line-height: 1.5;
+    clear: right;
+  }
+  #Main #reviews p::before {
+    content: "";
+    font-size: 250%;
+    float: left;
+    clear: both;
+    margin: 0;
+  }
+  #Main #reviews p:hover::before {
+    filter: sepia(100%);
+  }
+  #Main #reviews h1 {
+    font-size: 0;
+  }
+  #Main #reviews hr {
+    width: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+  #Main #reviews #reviewsSlide {
+    display: none;
+    height: 35%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(32, 110, 0, 0.1);
+    border-radius: 15px 15px 0 0;
+    margin: 0 0 0 -250%;
+    transition: margin 1s ease-out;
+  }
+  #Main #reviews #reviewsSlide:hover #left {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide:hover #right {
+    opacity: 1;
+  }
+  #Main #reviews #reviewsSlide #left {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide #right {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    right: 0;
+    height: 12%;
+    width: 7%;
+    transition: opacity .2s linear;
+  }
+  #Main #reviews #reviewsSlide .slide {
+    width: 6600px;
+    height: 100%;
+    padding: 0;
+    margin-left: -2200px;
+    font-size: 0;
+    transition: margin-left 0.5s linear;
+  }
+  #Main #reviews #reviewsSlide .slide li {
+    display: inline-block;
+    width: 1100px;
+    height: 100%;
+    font-size: 20px;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo {
+    float: left;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px 0 15px 0;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.first {
+    background: url("../files/aboutus.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.second {
+    background: url("../files/Canoe_1366x768.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.third {
+    background: url("../files/Baidarka1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.fourth {
+    background: url("../files/Baidarka2.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .photo.five {
+    background: url("../files/katamaran1.jpg");
+    background-size: cover;
+  }
+  #Main #reviews #reviewsSlide .slide li .job {
+    float: left;
+    width: 25%;
+    height: 30%;
+    color: black;
+    clear: left;
+    margin: 20px;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .review {
+    float: left;
+    width: 30%;
+    margin: 50px;
+    height: 40%;
+    font-size: 100%;
+  }
+  #Main #reviews #reviewsSlide .slide li .sub {
+    float: left;
+    width: 30%;
+    height: 10%;
+    margin: 50px;
+    font-size: 100%;
+  }
+  #Main #contact {
+    grid-area: contact;
+    background: grey;
+    /*background-color: rgba(63, 255, 0, 0.07)*/
+  }
+  #Main #contact h1 {
+    font-size: 200%;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+  }
+  #Main #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 55%;
+    margin: 50px auto 40px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+  }
+  #Main #contact form input {
+    border: none;
+    font-size: 100%;
+    height: 16%;
+    padding-left: 20px;
+    font-style: italic;
+    color: grey;
+  }
+  #Main #contact form input:first-of-type {
+    margin-top: 5px;
+  }
+  #Main #contact form input[type="button"] {
+    color: #fff;
+    font-weight: bold;
+    font-size: 120%;
+    font-style: normal;
+    width: 100%;
+    height: 20%;
+    background: #008b00;
+    border: 1px solid #008b00;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 0 5px black;
+    margin: 0;
+  }
+  #Main footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: foote;
+    background: #424242;
+    color: white;
+  }
+  #Main footer a {
+    text-decoration: none;
+    color: white;
+  }
+  #Main footer hr {
+    width: 30%;
+    border: 1px solid white;
+    margin: -10px 0 0 0;
+  }
+  #Main footer article {
+    /*display:inline-block*/
+    width: 55%;
+    height: 80%;
+    font-size: 120%;
+    padding: 20px 0 0 0;
+  }
+  #Main footer article h1 {
+    font-size: 120%;
+    margin-bottom: 20px;
+  }
+  #Main footer article h1:nth-of-type(2n) {
+    margin-top: 40px;
+  }
+  #Main footer article div {
+    margin: 40px 0 10px -15px;
+    width: 250px;
+  }
+  #Main footer article div .icon.small {
+    width: 62px;
+    height: 45px;
+    /*при уменьшении перескакивают, пошамань с шириной их контейнера(была 15%)*/
+    background-size: auto 150px;
+    filter: brightness(1500%);
+    margin: -5px;
+  }
+  #Main footer article div .icon.small:hover {
+    filter: brightness(100%) contrast(200%);
+  }
+  #Main footer article div .icon.small.ico1 {
+    transform: scale(0.7);
+    background-position: 0 0;
+  }
+  #Main footer article div .icon.small.ico2 {
+    transform: scale(0.7);
+    background-position: -50px 0;
+  }
+  #Main footer article div .icon.small.ico3 {
+    transform: scale(0.7);
+    background-position: -100px 0;
+  }
+  #Main footer article div .icon.small.ico4 {
+    transform: scale(0.7);
+    background-position: -50px -47px;
+  }
+  #Main footer article div .icon.small.ico5 {
+    transform: scale(0.7);
+    background-position: -100px -47px;
+  }
+  #Main footer article div .icon.small.ico6 {
+    transform: scale(0.7);
+    background-position: -100px -97px;
+  }
+  #Main footer article ul {
+    height: 30%;
+    width: 20%;
+    padding: 20px;
+  }
+  #Main footer article ul li {
+    width: 300%;
+    padding: 5px;
+  }
+}

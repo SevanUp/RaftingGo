@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказать</title>
+    <link rel="stylesheet" href="style/order.css">
+</head>
+<body>
+
+
+<div>
+    <a href="index.html">На главную</a>
+    <form action="">
+    <input required type="text" id="firstName" value="First Name">
+    <input required type="text" id="lastName" value="Last Name">
+    <input required type="email" id="email" value="Email">
+    <input required type="tel" id="tel" value="Phone">
+    <label for="chooseType">Выберите категорию:</label>
+    <select name="chooseType" id="chooseType">
+        <option value="Каноэ">Каноэ</option>
+        <option>Байдарка</option>
+        <option>Сплавной каяк</option>
+        <option>Надувная лодка</option>
+        <option>Катамаран</option>
+        <option>Экстрим</option>
+    </select>
+    <label for="chooseMany">Выберите вместимость:</label>
+    <select name="chooseMany" id="chooseMany">
+        <option value="Одноместная">Одноместная</option>
+        <option>Двуместная</option>
+        <option>Трехместная</option>
+        <option>Четырехместная</option>
+    </select>
+    <input type="button" value="Заказать">
+</form>
+</div>
+</body>
+</html>

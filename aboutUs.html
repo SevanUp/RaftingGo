@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="style/aboutUs.css">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe7LXFHARqWhJNO1x1lKryOwfLqBqFZNw&callback=initMap"></script>
+    <script async defer src="scripts/map.js"></script>
+    <script async defer src="scripts/showAbout.js"></script>
+    <script async defer src="scripts/connect.js"></script>
+    <script async defer src="scripts/slide.js"></script>
+    <script async defer src="scripts/hamburger.js"></script>
+</head>
+<body>
+
+<div class="connect">
+    <div>Оставьте ваш номер - и мы вам обязательно перезвоним</div>
+    <form action="">
+        <input required type="text" value="First Name">
+        <input required type="text" value="Last Name">
+        <input required type="tel" value="Phone">
+        <input type="button" value="Связаться">
+    </form>
+</div>
+<div id="Main">
+    <header id="Menu">
+        <div id="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="services.html">Услуги</a>
+                    <ul>
+                        <li><a href="services/canoa.html">Каноэ</a></li>
+                        <li><a href="services/baidar.html">Байдарка</a></li>
+                        <li><a href="services/kayak.html">Сплавной каяк</a></li>
+                        <li><a href="services/boat.html">Надувная лодка</a></li>
+                        <li><a href="services/catamaran.html">Катамаран</a></li>
+                        <li><a href="services/extrim.html">Экстрим</a></li>
+                    </ul>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li><a href="index.html">Главная</a>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li><a href="gallery.html">Галерея</a>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li id="button">
+                    <form action="#" id="connectForm">
+                        <input type="button" value="Связаться">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="slider">
+        <article>
+            <h1>15 лет на рынке</h1>
+            <hr>
+            <p>Наша компания предоставляет услуги водных видов спорта и развлечений с 2002 года.</p>
+        </article>
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div id="fourth"></div>
+    </section>
+    <section id="maper">
+        <h1>Наши офисы находятся в 15 странах мира</h1>
+        <hr>
+        <div id="map"></div>
+    </section>
+    <section id="co-worker">
+        <h1>Наши сотрудники</h1>
+        <hr>
+    </section>
+    <section id="employees">
+        <div id="container">
+            <div>
+                <div id="employee1"></div>
+                <article>
+                    <h3>Юрий Альхов</h3>
+                    <hr>
+                    <p>С самого детства занимался рыбалкой на Припяти, известной своими опасными воронками.
+                        К 20 годам решил, что хочет более острых ощущений и стал заниматься рафтингом. Сейчас работает в
+                        нашем офисе
+                        в Норвегии, Осло. Стаж работы - 20 лет.</p>
+                </article>
+            </div>
+            <div>
+                <div id="employee2"></div>
+                <article>
+                    <h3>Татьяна Спиридонова</h3>
+                    <hr>
+                    <p>Родилась в суровом северном краю России, в условиях холода и стужи. Ходила на барже
+                        по Волге с самых юных лет, сейчас занимается инструктажем и сопровождением в особо экстремальных
+                        условиях.
+                        Стаж работы - 10 лет.</p>
+                </article>
+            </div>
+            <div>
+                <div id="employee3"></div>
+                <article>
+                    <h3>Альба Риччи</h3>
+                    <hr>
+                    <p>Жила в итальянской семье в Риме и необыкновенно любит море. Работала в доках, занималась
+                        логистикой,
+                        сейчас работает нашим агентом по маркетингу и гидом в странах Средиземья. Организует массовые
+                        развлекательные
+                        туры. Стаж работы - 15 лет.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="cooperate">
+        <h1>Наши партнеры</h1>
+        <hr>
+        <div id="partners">
+            <img src="files/services/left-arrow.svg" alt="" id="left">
+            <img src="files/services/right-arrow.svg" alt="" id="right">
+            <ul class="slide">
+                <li>
+                    <div class="photo first"></div>
+                </li>
+                <li>
+                    <div class="photo second"></div>
+                </li>
+                <li>
+                    <div class="photo third"></div>
+                </li>
+                <li>
+                    <div class="photo fourth"></div>
+                </li>
+                <li>
+                    <div class="photo five"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <article>
+            <h1><a href="services.html">Услуги</a></h1>
+            <hr>
+            <ul>
+                <li><a href="services/canoa.html">Каноэ</a></li>
+                <li><a href="services/baidar.html">Байдарка</a></li>
+                <li><a href="services/kayak.html">Сплавной каяк</a></li>
+                <li><a href="services/boat.html">Надувная лодка</a></li>
+                <li><a href="services/catamaran.html">Катамаран</a></li>
+                <li><a href="services/extrim.html">Экстрим</a></li>
+            </ul>
+        </article>
+        <article>
+            <h1><a href="gallery.html">Галерея</a></h1>
+            <hr>
+            <h1><a href="aboutUs.html">О нас</a></h1>
+            <hr>
+            <div>
+                <a class="icon small ico1" href="http://www.facebook.com"></a>
+                <a class="icon small ico2" href="http://www.vk.com"></a>
+                <a class="icon small ico3" href="http://www.youtube.com"></a>
+                <a class="icon small ico4" href="http://www.instagram.com"></a>
+                <a class="icon small ico5" href="http://www.twitter.com"></a>
+                <a class="icon small ico6" href="http://www.viber.com"></a>
+            </div>
+        </article>
+        <article>
+            <h1>Контакты</h1>
+            <hr>
+            <p>ОАО "RaftingGo Company", 220049, Минск, ул.Волгоградская 34, ген.директор Тугай Всеволод,
+                зав.маркетингового отдела Татьяна Спиридонова</p>
+        </article>
+    </footer>
+</div>
+
+
+</body>
+</html>

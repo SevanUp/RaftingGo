@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style/gallery.css">
+    <script async defer src="scripts/gallery.js"></script>
+    <script async defer src="scripts/connect.js"></script>
+    <script async defer src="scripts/hamburger.js"></script>
+</head>
+<body>
+
+<div class="connect">
+    <div>Оставьте ваш номер - и мы вам обязательно перезвоним</div>
+    <form action="">
+        <input required type="text" value="First Name">
+        <input required type="text" value="Last Name">
+        <input required type="tel"  value="Phone">
+        <input type="button" value="Связаться">
+    </form>
+</div>
+<div id="Main">
+    <header id="Menu">
+        <div id="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="services.html">Услуги</a>
+                    <ul>
+                        <li><a href="services/canoa.html">Каноэ</a></li>
+                        <li><a href="services/baidar.html">Байдарка</a></li>
+                        <li><a href="services/kayak.html">Сплавной каяк</a></li>
+                        <li><a href="services/boat.html">Надувная лодка</a></li>
+                        <li><a href="services/catamaran.html">Катамаран</a></li>
+                        <li><a href="services/extrim.html">Экстрим</a></li>
+                    </ul>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li><a href="index.html">Главная</a>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li><a href="aboutUs.html">О нас</a>
+                    <hr>
+                </li>
+                <li>|
+                    <hr>
+                </li>
+                <li id="button">
+                    <form action="#" id="connectForm">
+                        <input type="button" value="Связаться">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="photos" class="slider">
+        <div id="container">
+            <img class="small" data-unique = "first" src="files/Baidarka1.jpg" alt="">
+            <img class="small" data-unique = "second" src="files/Baidarka3.jpg" alt="">
+            <img class="small" data-unique = "third" src="files/katamaran1.jpg" alt="">
+            <img class="small" data-unique = "fourth" src="files/katamaran2.jpg" alt="">
+            <img class="small" data-unique = "five" src="files/nadyv1.jpg" alt="">
+            <img class="small" data-unique = "six" src="files/nadyv2.jpg" alt="">
+            <img class="small" data-unique = "seven" src="files/services/boat1.jpg" alt="">
+            <img class="small" data-unique = "eight" src="files/services/boat2.jpg" alt="">
+            <img class="small" data-unique = "nine" src="files/Baidarka2.jpg" alt="">
+            <img class="small" data-unique = "ten" src="files/katamaran3.jpg" alt="">
+            <img class="small" data-unique = "eleven" src="files/nadyv3.jpg" alt="">
+            <img class="small" data-unique = "twelve" src="files/services/boat3.jpg" alt="">
+        </div>
+        <div class="show" data-unique = "first"><img class="big" src="files/Baidarka1.jpg" alt=""></div>
+        <div class="show" data-unique = "second"><img class="big" src="files/Baidarka3.jpg" alt=""></div>
+        <div class="show" data-unique = "third"><img class="big" src="files/katamaran1.jpg" alt=""></div>
+        <div class="show" data-unique = "fourth"><img class="big" src="files/katamaran2.jpg" alt=""></div>
+        <div class="show" data-unique = "five"><img class="big" src="files/nadyv1.jpg" alt=""></div>
+        <div class="show" data-unique = "six"><img class="big" src="files/nadyv2.jpg" alt=""></div>
+        <div class="show" data-unique = "seven"><img class="big" src="files/services/boat1.jpg" alt=""></div>
+        <div class="show" data-unique = "eight"><img class="big" src="files/services/boat2.jpg" alt=""></div>
+        <div class="show" data-unique = "nine"><img class="big" src="files/Baidarka2.jpg" alt=""></div>
+        <div class="show" data-unique = "ten"><img class="big" src="files/katamaran3.jpg" alt=""></div>
+        <div class="show" data-unique = "eleven"><img class="big" src="files/nadyv3.jpg" alt=""></div>
+        <div class="show" data-unique = "twelve"><img class="big" src="files/services/boat3.jpg" alt=""></div>
+    </section>
+    <footer>
+        <article>
+            <h1><a href="services.html">Услуги</a></h1>
+            <hr>
+            <ul>
+                <li><a href="services/canoa.html">Каноэ</a></li>
+                <li><a href="services/baidar.html">Байдарка</a></li>
+                <li><a href="services/kayak.html">Сплавной каяк</a></li>
+                <li><a href="services/boat.html">Надувная лодка</a></li>
+                <li><a href="services/catamaran.html">Катамаран</a></li>
+                <li><a href="services/extrim.html">Экстрим</a></li>
+            </ul>
+        </article>
+        <article>
+            <h1><a href="gallery.html">Галерея</a></h1>
+            <hr>
+            <h1><a href="aboutUs.html">О нас</a></h1>
+            <hr>
+            <div>
+                <a class="icon small ico1" href="http://www.facebook.com"></a>
+                <a class="icon small ico2" href="http://www.vk.com"></a>
+                <a class="icon small ico3" href="http://www.youtube.com"></a>
+                <a class="icon small ico4" href="http://www.instagram.com"></a>
+                <a class="icon small ico5" href="http://www.twitter.com"></a>
+                <a class="icon small ico6" href="http://www.viber.com"></a>
+            </div>
+        </article>
+        <article>
+            <h1>Контакты</h1>
+            <hr>
+            <p>ОАО "RaftingGo Company", 220049, Минск, ул.Волгоградская 34, ген.директор Тугай Всеволод,
+                зав.маркетингового отдела Татьяна Спиридонова</p>
+        </article>
+    </footer>
+</div>
+
+
+</body>
+</html>
